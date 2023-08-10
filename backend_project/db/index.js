@@ -1,13 +1,13 @@
 const Sequelize = require("sequelize");
 
-const sequelize =  new Sequelize("reactjs", "root", "", {
+const sequelize = new Sequelize("reactjs", "root", "root", {
     dialect: "mysql",
-    host: "localhost"
+    host: "127.0.0.1"
 });
 
-const Notes = require('./notes')(sequelize);
+const Notes = require('./Notes')(sequelize);
 
 module.exports = {
-    sequelize : sequelize,
-    notes : Notes
+    sequelize: sequelize,
+    notes: Notes
 }
